@@ -71,6 +71,8 @@ exe_Val = 30        # 執行的次數
 |F8|![F8](photo/10_dim/CEC2021_F8.png)|![F8](assest/2021_10dim_f8.png)|
 |F11|![F10](photo/10_dim/CEC2021_F10.png)|![F10](assest/2021_10dim_f10.png)|
 
+---
+
 ### 2. CEC2021 In 20-Dimension
 |Type|我實作的 EDGWO|論文中實作的 EDGWO|
 |:-:|:-:|:-:|
@@ -78,6 +80,8 @@ exe_Val = 30        # 執行的次數
 |F7|![F7](photo/20_dim/CEC2021_F7.png)|![F7](assest/2021_20dim_f7.png)|
 |F8|![F8](photo/20_dim/CEC2021_F8.png)|![F8](assest/2021_20dim_f8.png)|
 |F9|![F9](photo/20_dim/CEC2021_F9.png)|![F9](assest/2021_20dim_f9.png)|
+
+---
 
 ### 3. CEC2022 In 10-Dimension
 |Type|我實作的 EDGWO|論文中實作的 EDGWO|
@@ -87,6 +91,8 @@ exe_Val = 30        # 執行的次數
 |F8|![F8](photo/10_dim/CEC2022_F8.png)|![F8](assest/2022_10dim_f8.png)|
 |F12|![F12](photo/10_dim/CEC2022_F12.png)|![F12](assest/2022_10dim_f12.png)|
 
+---
+
 ### 4. CEC2022 In 20-Dimension
 |Type|我實作的 EDGWO|論文中實作的 EDGWO|
 |:-:|:-:|:-:|
@@ -95,8 +101,11 @@ exe_Val = 30        # 執行的次數
 |F10|![F10](photo/20_dim/CEC2022_F10.png)|![F10](assest/2022_20dim_f10.png)|
 |F11|![F11](photo/20_dim/CEC2022_F11.png)|![F11](assest/2022_20dim_f11.png)|
 
+---
 
 ### 5. EDGWO v.s. EDGWO_Kao
+EDGWO_Kao 是我嘗試改良的版本，我發現 EDGWO 在各個資料集上的表現其實沒有很穩定，並且還是有機會陷入區域最佳解，於是我嘗試了以下的改變。改良版本在某些資料會顯著的表現表現比原版好，例如 CEC2021 F8 以及 CEC2022 F10，在其他資料及則會有與原本差不多的表現。
+
 #### 停滯檢測與重置 ()：
 * 演算法會監控最佳適應度，若在一定周期內內進步幅度小於設定的容忍值，則判定演算法陷入停滯。
 * 觸發重置時，會將表現最差的 $15\%$ 個體，在當前最佳解附近以一定半徑內範圍重新生成，藉此跳脫局部最佳解，該半徑會隨時間而縮短。
